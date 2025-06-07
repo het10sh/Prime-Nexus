@@ -1,0 +1,42 @@
+[debug] [2025-03-15T16:29:57.054Z] ----------------------------------------------------------------------
+[debug] [2025-03-15T16:29:57.059Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\makad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init emulators
+[debug] [2025-03-15T16:29:57.060Z] CLI Version:   13.34.0
+[debug] [2025-03-15T16:29:57.060Z] Platform:      win32
+[debug] [2025-03-15T16:29:57.060Z] Node Version:  v22.13.0
+[debug] [2025-03-15T16:29:57.060Z] Time:          Sat Mar 15 2025 21:59:57 GMT+0530 (India Standard Time)
+[debug] [2025-03-15T16:29:57.060Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-15T16:29:57.314Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-15T16:29:57.314Z] > authorizing via signed-in user (millionairesmessenger007@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Het's Folder\Het TYCS Sem 6 Project\membership\microsoft-loop-2.0-main\microsoft-loop-2.0-main
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-03-15T16:30:02.625Z] Using project from CLI flag: primenexuscollaborativehorizon
+[debug] [2025-03-15T16:30:02.626Z] Checked if tokens are valid: true, expires at: 1742059722917
+[debug] [2025-03-15T16:30:02.626Z] Checked if tokens are valid: true, expires at: 1742059722917
+[debug] [2025-03-15T16:30:02.628Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/primenexuscollaborativehorizon [none]
+[debug] [2025-03-15T16:30:03.652Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/primenexuscollaborativehorizon 200
+[debug] [2025-03-15T16:30:03.653Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/primenexuscollaborativehorizon {"projectId":"primenexuscollaborativehorizon","projectNumber":"147841471517","displayName":"PrimeNexusCollaborativeHorizon","name":"projects/primenexuscollaborativehorizon","resources":{"hostingSite":"primenexuscollaborativehorizon"},"state":"ACTIVE","etag":"1_d25803f1-79e0-489d-8218-69b8713469bd"}
+[info] i  Using project primenexuscollaborativehorizon (PrimeNexusCollaborativeHorizon) 
+[info] 
+=== Emulators Setup
