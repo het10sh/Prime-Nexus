@@ -14,11 +14,10 @@ if (!admin.apps.length) {
   });
 }
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+export const dynamic = 'force-dynamic';
+export const maxDuration = 60; // optional, for serverless limits
+export const runtime = 'nodejs'; // or 'edge' if using Edge functions
+
 
 
 export default async function handler(req, res) {
