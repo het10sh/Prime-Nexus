@@ -18,8 +18,6 @@ export const dynamic = 'force-dynamic';
 export const maxDuration = 60; // optional, for serverless limits
 export const runtime = 'nodejs'; // or 'edge' if using Edge functions
 
-
-
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
@@ -44,27 +42,19 @@ export default async function handler(req, res) {
     if (event.type === "checkout.session.completed") {
       const session = event.data.object;
       const userEmail = session.customer_email;
-console.log("🔥 Got user email from session:", userEmail);
 
-await admin.firestore().collection("PrimeNexusUsers").doc(userEmail).set({
-  subscriptionStatus: "active",
-  docLimit: 20,
-}, { merge: true });
+      console.log("🔥 Got user email from session:", userEmail);
 
-
-      if (userId) {
-        console.log(`Updating user ${userId} subscription and docLimit...`);
-        
+      if (userEmail) {
         // Update user doc in Firebase
-        await admin.firestore().collection("PrimeNexusUsers").doc(userId).set({
+        await admin.firestore().collection("PrimeNexusUsers").doc(userEmail).set({
           subscriptionStatus: "active",
-          docLimit: 20, // Or whatever limit you want for upgraded users
+          docLimit: 20,
         }, { merge: true });
-        
 
-        console.log(`🔥 User ${userId} upgraded to PRO. Limit set to 15.`);
+        console.log(`🔥 User ${userEmail} subscription updated to active with docLimit 20.`);
       } else {
-        console.warn("⚠️ No userId found in metadata.");
+        console.warn("⚠️ No user email found in session.");
       }
     } else {
       console.log(`Unhandled event type: ${event.type}`);
